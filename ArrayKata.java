@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class ArrayKata {
 public static int maximumIn(int[] ArrayOfIntegers){
 	int max = ArrayOfIntegers[0];
