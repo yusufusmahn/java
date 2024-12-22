@@ -88,11 +88,38 @@ public static int noOfEvenNumbersIn (int[] ArrayOfIntegers){
 
 
 public static int[] squareNumbersIn (int[] ArrayOfIntegers){
+	int[] square = new int [ArrayOfIntegers.length];
 	for (int i = 0; i < ArrayOfIntegers.length; i++){
-	ArrayOfIntegers[i] *= ArrayOfIntegers[i]; 
+	 square[i] = ArrayOfIntegers[i] * ArrayOfIntegers[i]
 }
 
-	return ArrayOfIntegers;
+	return square;
+}
+
+
+	
+public static int[] minimumAndMaximumOf (int[] ArrayOfIntegers){
+
+int min = ArrayOfIntegers[0];
+int max = ArrayOfIntegers[0];
+
+
+for (int i = 0; i < ArrayOfIntegers.length; i++){
+
+if (ArrayOfIntegers[i] < min){
+min = ArrayOfIntegers[i];
+
+}
+
+if (ArrayOfIntegers[i] > max){
+max = ArrayOfIntegers[i];
+
+}
+
+}
+
+return new int[]{min, max};
+
 }
 
 
@@ -110,7 +137,7 @@ System.out.printf("The sum of all the odd element in the array is: %d%n",sumOfOd
 System.out.printf("The total number of all odd element in the array is: %d%n",noOfOddNumbersIn(ArrayOfIntegers));
 System.out.printf("The total number of all even element in the array is: %d%n",noOfEvenNumbersIn(ArrayOfIntegers));
 System.out.println("The square numbers in the array are:"+ Arrays.toString(squareNumbersIn(ArrayOfIntegers)));
-
+System.out.println("The minimum and maximum element is: "+Arrays.toString(minimumAndMaximumOf(ArrayOfIntegers)));
 
 
 
