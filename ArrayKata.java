@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.ArrayList;
 
 public class ArrayKata {
 public static int maximumIn(int[] ArrayOfIntegers){
@@ -123,6 +124,42 @@ return new int[]{min, max};
 }
 
 
+	
+public static ArrayList<Integer> evenNumbersIn (int[] ArrayOfIntegers){
+
+ArrayList<Integer> evenNos = new ArrayList<>();
+
+for (int i = 0; i < ArrayOfIntegers.length; i++){
+if (ArrayOfIntegers[i] % 2 == 0){
+evenNos.add(ArrayOfIntegers[i]);
+
+}
+
+}
+
+
+return evenNos;
+
+}
+
+
+
+public static ArrayList<Integer> oddNumbersIn (int[] ArrayOfIntegers){
+ArrayList<Integer> oddNos = new ArrayList<>();
+for(int i = 0; i < ArrayOfIntegers.length; i++){
+if (ArrayOfIntegers[i] % 2 != 0){
+oddNos.add(ArrayOfIntegers[i]);
+
+}
+
+}
+
+return oddNos;
+
+}
+
+
+
 
 
 public static void main(String[] args){
@@ -138,6 +175,9 @@ System.out.printf("The total number of all odd element in the array is: %d%n",no
 System.out.printf("The total number of all even element in the array is: %d%n",noOfEvenNumbersIn(ArrayOfIntegers));
 System.out.println("The square numbers in the array are:"+ Arrays.toString(squareNumbersIn(ArrayOfIntegers)));
 System.out.println("The minimum and maximum element is: "+Arrays.toString(minimumAndMaximumOf(ArrayOfIntegers)));
+System.out.printf("The list of all even element in the array is: %s%n",evenNumbersIn(ArrayOfIntegers));
+System.out.printf("The list of all odd element in the array is: %s%n",oddNumbersIn(ArrayOfIntegers));
+
 
 
 
