@@ -1,4 +1,3 @@
-import java.util.List;
 import java.util.ArrayList;
 
 public class Array11{
@@ -6,7 +5,7 @@ public static void main(String[] args){
 
 int number = 2342;
 
-List<Integer> values = digits(number);
+ArrayList<Integer> values = digits(number);
 
 System.out.println("The list of digits " + number + " are:" +values);
 
@@ -14,8 +13,8 @@ System.out.println("The list of digits " + number + " are:" +values);
 
 
 
-public static List<Integer> digits(int number){
-List<Integer> values = new ArrayList<>();
+public static ArrayList<Integer> digits(int number){
+ArrayList<Integer> values = new ArrayList<>();
 
 
 while(number > 0){
