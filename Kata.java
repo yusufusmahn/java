@@ -25,13 +25,13 @@ public static float divide (int number1, int number2){
 
 
 public static int factorOf (int number){
-	int i = 1;
+	int result = 1;
 	for (int j = 1; j < number; j++){
 	if (number % j == 0){
-	i++;
+	result++;
 }
 }
-	return i;
+	return result;
 }
 
  
@@ -42,19 +42,27 @@ public static boolean isSquare (int number){
 
 
 public static boolean isPalindrome (int number){
-	int extraction1 = number / 10000;
-	int extraction2 = number / 1000 % 10;
-	int extraction4 = number / 10 % 10;
-	int extraction5 = number % 10;
+	
+int extraction1 = number % 10;
+number /= 10;
+int extraction2 = number % 10;
+number /= 10;
+int extraction3 = number % 10;
+number /= 10;
+int extraction4 = number % 10;
+number /= 10;
+int extraction5 = number % 10;
 
 
-	if (extraction1 == extraction5 && extraction2 == extraction4){
-	return true;	
+if (extraction1 == extraction5 && extraction2 == extraction4){
+return true;
+
 }
-	else{
-	return false;
+
+return false;
+
 }
-}
+	
 
 
 public static int factorial(int number) {
