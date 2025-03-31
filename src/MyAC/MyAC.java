@@ -34,8 +34,10 @@ public class MyAC {
     }
 
     public int decreaseTemperature() {
-        if(this.isOn && this.temperature > 16) {}
+        if(this.isOn && this.temperature > 16) {
             return this.temperature -= 1;
+        }
+        return 0;
     }
 
     public int maxTemperature() {
