@@ -30,9 +30,9 @@ public class AirConditionerTest {
     public void testThatIncreaseTemperatureMethodWorksForAirConditioner() {
         MyAC myac = new MyAC();
         myac.OnAirConditioner();
-        int result = myac.getInitialTemperature();
+        myac.setInitialTemperature(17);
         myac.increaseTemperature();
-        assertEquals(result + 1, myac.getInitialTemperature());
+        assertEquals(18, myac.getInitialTemperature());
 
 
     }
@@ -42,10 +42,9 @@ public class AirConditionerTest {
     public void testThatDecreaseTemperatureMethodWorksForAirConditioner() {
         MyAC myac = new MyAC();
         myac.OnAirConditioner();
-        myac.increaseTemperature();
-        int result = myac.getInitialTemperature();
+        myac.setInitialTemperature(21);
         myac.decreaseTemperature();
-        assertEquals(result - 1, myac.getInitialTemperature());
+        assertEquals(20, myac.getInitialTemperature());
 
 
     }
@@ -54,8 +53,7 @@ public class AirConditionerTest {
     public void testToIncreaseTemperaturebeyond30_MethodWorksForAirConditioner() {
         MyAC myac = new MyAC();
         myac.OnAirConditioner();
-        myac.maxTemperature();
-        assertEquals(30, myac.getInitialTemperature());
+        myac.setInitialTemperature(30);
         myac.increaseTemperature();
         assertEquals(30, myac.getInitialTemperature());
 
@@ -65,8 +63,8 @@ public class AirConditionerTest {
     public void testToDecreaseTemperaturebelow16_MethodWorksForAirConditioner() {
         MyAC myac = new MyAC();
         myac.OnAirConditioner();
-        assertEquals(16, myac.getInitialTemperature());
-        myac.minTemperature();
+        myac.setInitialTemperature(16);
+        myac.decreaseTemperature();
         assertEquals(16, myac.getInitialTemperature());
     }
 

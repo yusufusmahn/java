@@ -33,6 +33,7 @@ public class MyAC {
         return this.temperature;
     }
 
+
     public int decreaseTemperature() {
         if(this.isOn && this.temperature > 16) {
             return this.temperature -= 1;
@@ -40,23 +41,8 @@ public class MyAC {
         return 0;
     }
 
-    public int maxTemperature() {
-        if(this.isOn) {
-            while (this.temperature < 30) {
-                this.increaseTemperature();
-            }
-        }
-        return this.temperature;
 
-    }
-
-
-    public int minTemperature() {
-        if(this.isOn) {
-            if (this.temperature == 16) {
-                return this.temperature;
-            }
-        }
-        return getInitialTemperature();
+    public void setInitialTemperature(int temperature) {
+        this.temperature = temperature;
     }
 }
