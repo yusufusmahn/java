@@ -100,12 +100,6 @@ public class AutomaticBikeTest {
         assertEquals(37, myBike.getSpeed());
     }
 
-    @Test
-    public void testThatGear5AccelerationMethodWorks(){
-        AutomaticBike myBike = new AutomaticBike();
-        myBike.SwitchOn();
-        myBike.setSpeed(55);
-    }
 
     @Test
     public void testThatGearShiftForwardFrom1To2Works(){
